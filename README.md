@@ -1,7 +1,7 @@
 # sample-node-sails
 Sails APIs sample using [Axioms](https://axioms.io). Secure your Sails APIs using Axioms authentication and authorization.
 
-For this sample we will use [@axioms/sails-js](https://github.com/axioms-io/express-js) SDK.
+For this sample we will use [@axioms/express-js](https://github.com/axioms-io/express-js) SDK.
 
 ## Prerequisite
 
