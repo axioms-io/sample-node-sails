@@ -27,7 +27,7 @@ module.exports.policies = {
 
   JsonController: {
     'private': [checkToken, validScope(['profile', 'openid'])],
-    'admin': [checkToken, validScope(['tenant:owner'])]
+    'role': [checkToken, validScope(['sample:role'])]
   }
 
 };

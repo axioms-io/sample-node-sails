@@ -14,9 +14,9 @@ module.exports = {
       message: 'All good. You are authenticated!'
     });
   },
-  admin: function(req, res) {
+  role: function(req, res) {
     return res.json({
-      message: 'All good. You are authenticated as admin!'
+      message: 'All good. You are authenticated with role sample:role!'
     });
   }
 };

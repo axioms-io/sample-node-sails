@@ -21,7 +21,7 @@ module.exports.routes = {
   '/': 'JsonController.home',
   'get /public': 'JsonController.public',
   'get /private': 'JsonController.private',
-  'get /admin': 'JsonController.admin',
+  'get /role': 'JsonController.role',
 
   /***************************************************************************
    *                                                                          *
