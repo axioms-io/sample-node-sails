@@ -34,3 +34,14 @@ node app.js --port 5000
 ## Test using Postman
 Postman collection is included in this repository. Import the collection in your Postman, setup environment variables `host` (i.e. localhost:5000) and `access_token` (you can obtain from your client) and test these APIs.
 
+## Documentation
+See [documentation](https://developer.axioms.io/docs/sdks-samples/use-with-apis/nodejs/sails-apis) for `express-js`.
+
+## Deploy to Heroku
+You will need to provide Axioms domain and Axioms audience to complete deployment.
+
+<a href="https://heroku.com/deploy?template=https://github.com/axioms-io/sample-node-sails">
+  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy" width="200px">
+</a>
+
+[![Edit sample-python-flask](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/axioms-io/sample-node-sails/tree/master/?fontsize=14&hidenavigation=1&theme=light)

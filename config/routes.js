@@ -18,11 +18,14 @@ module.exports.routes = {
    *                                                                          *
    ***************************************************************************/
 
-  '/': 'JsonController.home',
+  'get /': 'JsonController.home',
   'get /public': 'JsonController.public',
   'get /private': 'JsonController.private',
-  'get /role': 'JsonController.role',
-
+  '/role': 'JsonController.role',
+  'get /permission': 'JsonController.sampleRead',
+  'post /permission': 'JsonController.sampleCreate',
+  'patch /permission': 'JsonController.sampleUpdate',
+  'delete /permission': 'JsonController.sampleDelete'
   /***************************************************************************
    *                                                                          *
    * More custom routes here...                                               *

@@ -8,10 +8,12 @@
  * https://sailsjs.com/docs/concepts/policies
  */
 
-const { validToken } = require('@axioms/express-js');
-const { validScope } = require('@axioms/express-js');
+const { hasValidAccessToken } = require('@axioms/express-js');
+const { hasRequiredScopes } = require('@axioms/express-js');
+const { hasRequiredRoles } = require('@axioms/express-js');
+const { hasRequiredPermissions } = require('@axioms/express-js');
 
-const checkToken = validToken({
+const checkToken = hasValidAccessToken({
   axiomsDomain: process.env.AXIOMS_DOMAIN,
   axiomsAud: process.env.AXIOMS_AUDIENCE
 });
@@ -26,8 +28,12 @@ module.exports.policies = {
   '*': true,
 
   JsonController: {
-    'private': [checkToken, validScope(['profile', 'openid'])],
-    'role': [checkToken, validScope(['sample:role'])]
+    'private': [checkToken, hasRequiredScopes(['profile', 'openid'])],
+    'role': [checkToken, hasRequiredRoles(['sample:role'])],
+    'sampleRead': [checkToken, hasRequiredPermissions(['sample:read'])],
+    'sampleCreate': [checkToken, hasRequiredPermissions(['sample:create'])],
+    'sampleUpdate': [checkToken, hasRequiredPermissions(['sample:update'])],
+    'sampleDelete': [checkToken, hasRequiredPermissions(['sample:delete'])]
   }
 
 };
