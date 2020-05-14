@@ -1,19 +1,17 @@
 # sample-node-sails
-Sails APIs sample using [Axioms](https://axioms.io). Secure your Sails APIs using Axioms authentication and authorization.
-
-For this sample we will use [@axioms/express-js](https://github.com/axioms-io/express-js) SDK.
+Sails.js APIs sample using [Axioms](https://axioms.io) and [@axioms/express-js](https://github.com/axioms-io/express-js). Secure your Sails APIs using Axioms authentication and authorization.
 
 ## Prerequisite
 
 * Node v10.16.0+
-* An [Axioms](https://axioms.io) client which can obtain access token after user's authentication and authorization and include in `Authorization` header of all API request sent to Node/Express application server.
+* An [Axioms](https://axioms.io) client which can obtain access token after user's authentication and authorization and include obtained access token as bearer in `Authorization` header of all API request sent to Node/Sails application server.
 
 ## Setup
 Clone this repository,
 
 ```
 git clone https://github.com/axioms-io/sample-node-sails.git
-cd sample-node-express
+cd sample-node-sails
 npm install
 ```
 
